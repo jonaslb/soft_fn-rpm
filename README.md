@@ -1,4 +1,5 @@
-#RPM packaging for soft_fn
+# RPM packaging for soft_fn
+
 This is rpm packaging for soft_fn.
 I am making it available on Copr (link coming).
 

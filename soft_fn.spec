@@ -9,6 +9,8 @@ URL: https://github.com/metaquanta/soft_fn
 Source0: https://github.com/metaquanta/soft_fn/archive/%{commit}.tar.gz
 Patch0: systemd-udevd.patch
 
+BuildRequires: gcc make
+
 %description
 soft-fn reproduces the behavior of the Chromebook keyboard's Search key in linux.
 It uses an evdev uinput device, such that it works in Xorg, Wayland, and virtual consoles.
