@@ -9,7 +9,11 @@ URL: https://github.com/metaquanta/soft_fn
 Source0: https://github.com/metaquanta/soft_fn/archive/%{commit}.tar.gz
 Patch0: systemd-udevd.patch
 
-BuildRequires: gcc make
+BuildRequires: gcc make systemd systemd-rpm-macros
+Requires: systemd
+Requires(post): systemd
+Requires(preun): systemd
+Requires(postun): systemd
 
 %description
 soft-fn reproduces the behavior of the Chromebook keyboard's Search key in linux.
@@ -33,6 +37,9 @@ install -m 0644 99-disable-power-button.rules %{buildroot}%{_datadir}/soft_fn
 
 %post
 %systemd_post soft-fn.service
+
+%preun
+%systemd_preun soft-fn.service
 
 %postun
 %systemd_postun_with_restart soft-fn.service
