@@ -1,0 +1,12 @@
+diff --git a/soft-fn.service b/soft-fn.service
+index c0f735d..da17623 100644
+--- a/soft-fn.service
++++ b/soft-fn.service
+@@ -1,6 +1,6 @@
+ [Unit]
+ Description=Virtual keyboard (soft-fn)
+-Requires=udev.service 
++Requires=systemd-udevd.service 
+ 
+ [Install]
+ WantedBy=graphical.target

@@ -1,0 +1,6 @@
+*.log
+*.tar.gz
+soft_fn-*/
+soft_fn-*.src.rpm
+*.patch
+x86_64/
